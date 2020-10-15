@@ -5,19 +5,12 @@ var posterImage = document.querySelector(".poster-img")
 var posterQuote = document.querySelector(".poster-quote")
 
 var makeYourOwnPosterButton = document.querySelector(".show-form")
-var posterImage.src = document.querySelector(".poster-img")
-var posterTitle.innerText = document.querySelector(".poster-title")
-var posterQuote.innerText = document.querySelector(".poster-quote")
+
+var showSavedPostersButton.addEventListener(".show-saved")
 
 var takeMeBackButton = document.querySelector(".show-main")
-var posterImage.src = document.querySelector(".poster-img")
-var posterTitle.innerText = document.querySelector(".poster-title")
-var posterQuote.innerText = document.querySelector(".poster-quote")
 
 var backToMainButton = document.querySelector(".back-to-main")
-var posterImage.src = document.querySelector(".poster-img")
-var posterTitle.innerText = document.querySelector(".poster-title")
-var posterQuote.innerText = document.querySelector(".poster-quote")
 
 // we've provided you with some data to work with 👇
 var images = [
@@ -124,6 +117,15 @@ var currentPoster;
 // event listeners go here 👇
 window.addEventListener("load", showRandomPoster);
 showRandomPosterButton.addEventListener("click", showRandomPoster);
+
+window.addEventListener("click", takeBack);
+takeMeBackButton.addEventListener("click", takeBack);
+
+window.addEventListener("click", makeYourOwnPoster);
+makeYourOwnPosterButton.addEventListener("click", makeYourOwnPoster);
+
+window.addEventListener("click", takeToMain);
+backToMainButton.addEventListener("click", takeToMain);
 
 // functions and event handlers go here 👇
 function randomizePoster() {
